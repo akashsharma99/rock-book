@@ -5,7 +5,7 @@
 echo "inside create.php <br/>";
 $user=$_POST["username"];
 $pass=$_POST["password"];
-include config.php;
+include 'config.php';
 $connect=mysqli_connect($server,$mydbUser,$mydbPass,$mydb) or die("Database connection failed!");
 	 if(!$connect)
 	 {

@@ -2,10 +2,11 @@
 <body background="background.jpg"></body>
 </html>
 <?php
-echo "inside create.php <br/>";
+echo "inside login.php <br/>";
 $user=$_POST["username"];
 $pass=$_POST["password"];
-	include config.php;
+$flag=0;
+	include 'config.php';
     $connect=mysqli_connect($server,$mydbUser,$mydbPass,$mydb);
 	 if(!$connect)
 	 {
@@ -13,7 +14,7 @@ $pass=$_POST["password"];
 	 }
 	 echo "Success"."<br/>";
      $query = "SELECT * from userid;";
-	$result = mysqli_query($query,$connect);
+	$result = $connect->query($query);
 	//echo $result;
 	while($row = mysqli_fetch_array($result,MYSQLI_ASSOC))
 	{
