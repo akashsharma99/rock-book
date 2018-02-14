@@ -2,7 +2,7 @@
 <body background="background.jpg"></body>
 </html>
 <?php
-echo "inside login.php <br/>";
+
 $user=$_POST["username"];
 $pass=$_POST["password"];
 $flag=0;
@@ -12,7 +12,7 @@ $flag=0;
 	 {
 	 	echo "Failed";
 	 }
-	 echo "Success"."<br/>";
+	 
      $query = "SELECT * from userid;";
 	$result = $connect->query($query);
 	//echo $result;
